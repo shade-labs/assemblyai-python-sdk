@@ -13,12 +13,12 @@ def get_version() -> str:
 
 
 setup(
-    name="assemblyai",
+    name="newassemblyai",
     version=get_version(),
     description="AssemblyAI Python SDK",
     author="AssemblyAI",
     author_email="engineering.sdk@assemblyai.com",
-    packages=find_packages(),
+    packages=find_packages(exclude=["tests", "tests.*"]),
     install_requires=[
         "httpx>=0.19.0",
         "pydantic>=1.7.0,!=1.10.7",
